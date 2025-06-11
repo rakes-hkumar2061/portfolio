@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Top Level Navbar</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #0f0f0f;
+    }
+
+    .navbar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #a59ced;
+      padding: 10px 20px;
+      color: rgb(235, 224, 224);
+    }
+
+    .logo img {
+      height: 60px;
+      border-radius: 80%;
+    }
+
+    .menu {
+      display: flex;
+      gap: 40px;
+    }
+
+    .menu a {
+      text-decoration: none;
+      color: rgb(0, 0, 0);
+      font-weight: bold;
+    }
+
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      background-color: #e8e7f7;
+      padding: 10px;
+      border-radius: 0 0 10px 10px;
+      min-width: 120px;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown-content a {
+      display: block;
+      margin: 5px 0;
+      color: rgb(0, 0, 0);
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+      .menu {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+      }
+
+      .dropdown-content {
+        position: static;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <div class="logo">
+      <img src="https://c8.alamy.com/comp/2A0MD94/creative-initial-letter-r-logo-design-vector-graphic-concept-2A0MD94.jpg" alt="logo">
+    </div>
+    <div class="menu">
+      <a href="#">HOME</a>
+      <a href="#">ABOUT</a>
+      <a href="#">PROJECT</a>
+      <a href="#">CONTACT</a>
+      <div class="dropdown">
+        <a href="#">MORE▾</a>
+        <div class="dropdown-content">
+          <a href="https://www.linkedin.com/in/rakesh-kumar-3a196229a/">LinkedIn</a>
+          <a href="https://github.com/rakes-hkumar2061">GitHub</a>
+          <a href="https://www.naukri.com/mnjuser/profile">Naukri</a>
+          <a href="https://contacts.google.com/">Contact</a>
+          <a href="https://www.google.com/">Google</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
